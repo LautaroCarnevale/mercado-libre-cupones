@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Mercado Libre Cupones",
+  "version": "1.0.0",
+  "description": "Detecta, lista y activa cupones disponibles en Mercado Libre desde una API externa y análisis contextual de página.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://*.mercadolibre.com.ar/*",
+    "https://*.mercadolibre.com/*",
+    "https://listado.mercadolibre.com.ar/*",
+    "https://articulo.mercadolibre.com.ar/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Mercado Libre Cupones"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mercadolibre.com.ar/*",
+        "https://*.mercadolibre.com/*",
+        "https://listado.mercadolibre.com.ar/*",
+        "https://articulo.mercadolibre.com.ar/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
