@@ -126,3 +126,7 @@ La extensión interactúa con un backend que provee la información de los cupon
 - **Fragilidad del Scraping**: Las clases CSS y selectores del DOM de Mercado Libre (`ui-pdp-title`, `andes-breadcrumb`, etc.) están sujetos a cambios sin previo aviso. Se utilizan múltiples estrategias de fallback, pero es posible que se requiera mantenimiento continuo.
 - **Rate Limiting**: Se incluye una política interna de reintentos con retraso exponencial para mitigar bloqueos o límites de cuota por parte de la API de Mercado Libre.
 - **Seguridad**: Toda lógica del frontend es completamente auditable. No compartas claves de API secretas en el bundle final.
+
+---
+
+Desarrollado por **Lautaro Carnevale** 🚁
